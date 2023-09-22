@@ -1,0 +1,37 @@
+HTTP1.1 vs HTTP 2
+
+
+
+HTTP1.1
+The first HTTP came across many stages of development, so it is named as HTTP 1.1 . 
+
+It goes with one by one content delivery, so that means, 
+if one of the Content fails, 
+then the other contents will not be delivered to the client from the server
+
+
+
+
+HTTP 2:
+This is a new Upgraded version of HTTP1.1, where all the contents can be delivered in one time and 
+it can be delivered as per the command by the Developer, 
+to show which content should be shown first and last.
+
+
+It gives a several streams of data at one time.
+It does with a 
+single TCP connection(Transmission Control Protocol) where it does with error checking and other possibilities that an IP cannot do.
+
+
+The difference between the both the HTTP are the performance, which is 
+
+Multiplexing
+
+Server Push
+
+Header Compression
+
+
+
+
+HTTP 3 is being developed and tested with few sites with the use of new QUIC method.
