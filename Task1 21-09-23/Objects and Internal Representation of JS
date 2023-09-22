@@ -1,0 +1,14 @@
+Objects are the building blocks of JavaScript
+There are different data types that store a single value each
+
+Objects can contain a combination of data-types as well as reference data-types
+
+objects in javascript my be defined as an unordered collection of related data in the form of "KEY:Value" pairs.
+These keys can be variables or functions and are called properties and methods.
+
+the bracket notation for an object will be [],{} etc..
+and the data types are string, Number, Boolean, undefined etc....
+
+creating javascript object with a constructor means that we can give an option of what kind of data types to store in the objects and 
+to call the constructor to a function and give a data of any type defined inside the object.
+
