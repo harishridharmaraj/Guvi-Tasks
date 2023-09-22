@@ -1,0 +1,19 @@
+Difference between Window and document objects:
+
+the window is at the top level and the root object of the Website or a page and
+it has the document to do things as (DOM)Document Object Model.
+
+A document inside the Window can be as HTML, PHP, JS etc...
+A Window Object can be as inner height and width and caches
+
+which can be specifically called as window.propertyname to change the value of the Property that is present in the Window.
+and the document can be accessed by window.document.propertyname
+
+For ex: in CSS
+*{
+color:Blue
+}
+all the colors of the font, SVG, will be turned to a Blue color.
+
+and in Javascript for the document:
+document.getElementById("id") to change.
