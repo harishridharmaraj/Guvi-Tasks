@@ -1,0 +1,53 @@
+// Compare two JSON without order
+var obj1 = { name: "person1", age: 25 };
+var obj2 = { name: "person2", age: 20 };
+
+if (obj1.length === obj2.length) {
+  console.log("Both objects have same number of properties");
+} else {
+  console.log("error");
+}
+
+// Use API to fetch data and log flags of all countries
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    console.log(response);
+    for (let i = 0; i < response.length; i++) {
+      console.log(i, response[i].flag);
+    }
+  } else {
+    console.log("error");
+  }
+};
+
+// Use API to fetch data and log region, population of all countries
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    console.log(response);
+    for (let i = 0; i < response.length; i++) {
+      console.log(
+        i,
+        response[i].region +
+          "-" +
+          response[i].subregion +
+          "-" +
+          response[i].population
+      );
+    }
+  } else {
+    console.log("error");
+  }
+};
