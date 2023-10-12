@@ -1,0 +1,36 @@
+----------------Write a Person Class to hold all the details------------
+
+class Person {
+  constructor(name, age, occupation, address) {
+    this.name = name;
+    this.age = age;
+    this.occupation = occupation;
+    this.address = address;
+  }
+}
+const resume=new Person("Harishri", 20, "Business", "Coimbatore")
+console.log(resume);
+
+
+----------------Write a Class to calculate the UBER Price------------
+class UberPrice {
+  constructor(baseprice, cost) {
+    this.baseprice = baseprice;
+    this.cost = cost;
+  }
+
+  calculatePrice(distance) {
+    if (distance <= 0) {
+      return 0; // Distance must be positive
+    }
+
+    const price = this.baseprice + this.cost * distance;
+    return price;
+  }
+}
+
+const calculator = new UberPrice(30, 15);
+const distance = 10;
+const price = calculator.calculatePrice(distance);
+
+console.log(`The estimated Uber price for a ${distance}-mile ride is ${price}`);
