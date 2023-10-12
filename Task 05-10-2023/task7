@@ -1,0 +1,71 @@
+-----------------Using Filter function for Region Asia------------
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    var region = response.filter((regions) => {
+      return regions.region == "Asia";
+    });
+    console.log(region);
+  }
+};
+
+
+-----------------Using Filter function for population below 2 lakh------------
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    var region = response.filter((regions) => {
+      return regions.population < 200000;
+    });
+    console.log(region);
+  }
+};
+
+
+
+-----------------Using forEach function to get Name, Capital and Flag------------
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+let text = "";
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    response.forEach((item) => {
+      console.log(item.name.common + " " + item.capital + " " + item.flag);
+    });
+  }
+};
+
+
+
+-----------------print countries that use US dollars------------
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+let text = "";
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    response.filter((item) => {
+      if (item?.currencies?.USD?.name == "United States dollar") {
+        console.log(item.subregion);
+      }
+    });
+  }
+};
