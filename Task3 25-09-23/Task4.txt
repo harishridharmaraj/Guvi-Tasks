@@ -1,0 +1,259 @@
+--------print the odd numbers in an array---------
+
+var array = [];
+for (let i = 0; i < 100; i++) {
+  var a = i % 2;
+  if (a != 0) {
+    array.push(i);
+  }
+}
+console.log(array);
+
+
+
+
+
+--------Convert all the strings to title caps in a string array---------
+
+var str = ["apple", "banana", "kiwi", "jackfruit", "orange"];
+
+for (i = 0; i < str.length; i++) {
+  var data = str[i];
+  var abc = data[0].toUpperCase() + data.slice(1);
+  console.log(abc);
+}
+
+
+
+--------Sum of all numbers in an array---------
+
+var data = [1, 3, 6, 8, 55, 33, 6, 88, 4, 2, 55, 9, 66, 46];
+let sum = 0;
+for (i = 0; i < data.length; i++) {
+  sum = sum + data[i];
+  console.log(sum);
+}
+
+
+
+
+--------Return all the prime numbers in an array---------
+var a = [2, 3, 5, 7];
+for (i = 2; i <= 100; i++) {
+  if (i % 3 !== 0 && i % 2 !== 0 && i % 5 !== 0 && i % 7 !== 0) {
+    a.push(i);
+  }
+}
+
+console.log(a);
+
+//Another Way
+(function(){
+for (i = 1; i <= 100; i++) {
+  let flag = 0;
+  for (j = 2; j < i; j++) {
+    if (i % j == 0) {
+      flag = 1;
+      break;
+    }
+  }
+  if (flag == 0) {
+    console.log(i);
+  }
+}})()
+
+
+
+--------Return all the palindromes in an array---------
+var a = [
+  "eye",
+  "iris",
+  "Help",
+  "Racecar",
+  "level",
+  "rotor",
+  "kayak",
+  "Hello",
+  "madam",
+  "refer",
+];
+(function () {
+  for (i = 0; i < a.length; i++) {
+    var j = a[i].split("");
+    var b = j.reverse();
+    var c = b.join("");
+    if (a[i] == c) {
+      console.log(a[i] + " It's a Palindrome");
+    } else {
+      console.log(a[i] + " Not a Palindrome");
+    }
+  }
+})();
+
+
+
+
+--------Return median of two sorted arrays of the same size.---------
+var a = [2, 10, 23, 45, 56];
+var b = [3, 14, 32, 54, 65];
+var arr = [];
+
+arr.push(...a, ...b);
+var arrr = arr.sort(function (a, b) {
+  return a - b;
+});
+console.log(arr);
+
+if (a.length == b.length) {
+  var n1 = parseInt(arrr.length / 2) - 1;
+  var n2 = parseInt(arrr.length / 2);
+  var b1 = arrr[n1];
+  var b2 = arrr[n2];
+  console.log((b1 + b2) / 2);
+} else {
+  var d1 = parseInt(arrr.length / 2);
+  var d2 = arrr[d1];
+  console.log(d2);
+}
+
+
+
+
+--------Remove duplicates from an array---------
+
+var a = [10, 23, 42, 68, 48, 85, 10, 42, 68];
+var arr = a;
+for (i = 0; i < a.length; i++) {
+  let flag = 0;
+  for (j = 0; j < i; j++) {
+    if (a[i] - arr[j] == 0) {
+      flag = 1;
+      break;
+    }
+  }
+  if (flag == 0) {
+    console.log(a[i]);
+  }
+}
+
+
+--------Rotate an array by k times---------
+var a = [1, 2, 3, 4, 5];
+var k = 1;
+var arr = [];
+
+var b = a.slice(-k);
+var d = a.reverse().slice(k).reverse();
+arr.push(...b, ...d);
+console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------Using Arrow Functions--------------
+--------print the odd numbers in an array---------
+var array = [];
+hello = () => {
+  for (let i = 0; i < 100; i++) {
+    var a = i % 2;
+    if (a != 0) {
+      array.push(i);
+    }
+  }
+  console.log(array);
+};
+console.log(hello());
+
+
+
+
+--------Convert all the strings to title caps in a string array---------
+
+var str = ["apple", "banana", "kiwi", "jackfruit", "orange"];
+
+uppercase = () => {
+  for (i = 0; i < str.length; i++) {
+    var data = str[i];
+    var abc = data[0].toUpperCase() + data.slice(1);
+    console.log(abc);
+  }
+};
+uppercase();
+
+
+
+--------Sum of all numbers in an array---------
+
+var data = [1, 3, 6, 8, 55, 33, 6, 88, 4, 2, 55, 9, 66, 46];
+let sum = 0;
+summ = () => {
+  for (i = 0; i < data.length; i++) {
+    sum = sum + data[i];
+  }
+  console.log(sum);
+};
+summ();
+
+
+
+
+--------Return all the prime numbers in an array---------
+prime = () => {
+  for (i = 1; i <= 100; i++) {
+    let flag = 0;
+    for (j = 2; j < i; j++) {
+      if (i % j == 0) {
+        flag = 1;
+        break;
+      }
+    }
+    if (flag == 0) {
+      console.log(i);
+    }
+  }
+};
+prime();
+
+
+
+--------Return all the palindromes in an array---------
+var a = [
+  "eye",
+  "iris",
+  "Help",
+  "Racecar",
+  "level",
+  "rotor",
+  "kayak",
+  "Hello",
+  "madam",
+  "refer",
+];
+Palindrome = () => {
+  for (i = 0; i < a.length; i++) {
+    var j = a[i].split("");
+    var b = j.reverse();
+    var c = b.join("");
+    if (a[i] == c) {
+      console.log(a[i] + " It's a Palindrome");
+    } else {
+      console.log(a[i] + " Not a Palindrome");
+    }
+  }
+};
+Palindrome();
+
+
