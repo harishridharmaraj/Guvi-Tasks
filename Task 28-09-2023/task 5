@@ -1,0 +1,101 @@
+// ------------------for loop---------------------
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    console.log(response);
+    for (let i = 0; i < response.length; i++) {
+      console.log(i, response[i].currencies);
+    }
+  } else {
+    console.log("error");
+  }
+}
+
+
+// ------------------for in loop---------------------
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    for (i in response) {
+      console.log(response[i].subregion);
+    }
+  } else {
+    console.log("error");
+  }
+};
+
+
+// ------------------for of loop---------------------
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    for (let i of response) {
+      var arr = i;
+      console.log(arr.subregion);
+    }
+  } else {
+    console.log("error");
+  }
+};
+
+
+
+// ------------------forEach loop---------------------
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://restcountries.com/v3.1/all", true);
+
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    let response = JSON.parse(xhr.responseText);
+    response.forEach((item) => {
+      if (item?.currencies?.USD?.name == "United States dollar") {
+        console.log(item.subregion);
+      }
+    });
+  } else {
+    console.log("error");
+  }
+};
+
+
+
+// ---------------resume in JSON format----------------
+const resume={
+    Name:"Harishri D",
+    Age:28,
+    Occupation:'Business',
+    language_Skills:[{
+        HTML:4,
+        CSS:4,
+        Javascript:3,
+        React:2,
+        Nodejs:2,
+        
+    }],Other_Skills:['Project Management','Team Flexibility','etc...'],
+    Education:[{Bannari_Amman_Institute_of_Technology:"B.Tech-Biotechology",
+    CGPA:6.2
+},{
+    Sri_Krishna_Institute_of_Technology:"M.B.A",
+    CGPA:8.0
+}]
+
+}
+
+
