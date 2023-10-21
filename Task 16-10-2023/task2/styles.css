@@ -1,0 +1,26 @@
+.container-fluid {
+  width: max-content;
+  height: 100vh;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.name > div > input {
+  width: 200px;
+}
+.email > input {
+  width: 420px;
+}
+.email > label {
+  padding-left: 0;
+}
+.fa-star {
+  color: rgb(255, 157, 0);
+}
+.table {
+  text-align: center;
+}
+button {
+  width: max-content;
+  padding: 10px;
+  margin: 0;
+}
