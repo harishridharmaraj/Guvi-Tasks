@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <form action="" class="d-flex flex-column gap-2">
+        <div class="d-flex flex-row gap-3 name">
+          <div>
+            <label><b>Name</b><sup class="text-danger">*</sup></label
+            ><br /><input type="text" />
+            <div class="form-text">first</div>
+          </div>
+          <div>
+            <br /><input type="text" />
+            <div class="form-text">last</div>
+          </div>
+        </div>
+        <div class="row email mx-0">
+          <label for="email "
+            ><b>Email</b><sup class="text-danger">*</sup></label
+          >
+          <input type="email" />
+        </div>
+        <div class="experience row">
+          <label><b>Your Experience</b><sup class="text-danger">*</sup></label>
+          <div class="gap-1 d-flex">
+            <span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span>
+          </div>
+          <div class="form-text">
+            Overall, how would you rate your experience with us?
+          </div>
+        </div>
+        <div class="row table-responsive">
+          <label
+            ><b>How satisfied are you with</b
+            ><sup class="text-danger">*</sup></label
+          >
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Very Unsatisfied</th>
+                <th scope="col">Unsatisfied</th>
+                <th scope="col">Neutral</th>
+                <th scope="col">Satisfied</th>
+                <th scope="col">Very Satisfied</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-secondary">
+                <th scope="row" style="text-align: start">Purchase</th>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+              </tr>
+              <tr>
+                <th scope="row" style="text-align: start">Service</th>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row" style="text-align: start">Company Overall</th>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row table-responsive">
+          <label
+            ><b>How likely are you to</b><sup class="text-danger">*</sup></label
+          >
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Very Unlikely</th>
+                <th scope="col">Unlikely</th>
+                <th scope="col">Neutral</th>
+                <th scope="col">Likely</th>
+                <th scope="col">Very Likely</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-secondary">
+                <th scope="row" style="text-align: start; width: 180px">
+                  Buy from us again
+                </th>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+              </tr>
+              <tr>
+                <th scope="row" style="text-align: start; width: 180px">
+                  Recommend our <br />product to others
+                </th>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row" style="text-align: start; width: 180px">
+                  Recommend our <br />
+                  company to others
+                </th>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+                <td><input type="radio" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row">
+          <label><b>Additional comments or suggestions</b></label>
+          <textarea cols="20" rows="5"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
