@@ -1,25 +1,26 @@
 setTimeout(() => {
-  console.log("10");
+  document.getElementById("demo").innerHTML = "10";
   setTimeout(() => {
-    console.log("9");
+    document.getElementById("demo").innerHTML = "9";
     setTimeout(() => {
-      console.log("8");
+      document.getElementById("demo").innerHTML = "8";
       setTimeout(() => {
-        console.log("7");
+        document.getElementById("demo").innerHTML = "7";
         setTimeout(() => {
-          console.log("6");
+          document.getElementById("demo").innerHTML = "6";
           setTimeout(() => {
-            console.log("5");
+            document.getElementById("demo").innerHTML = "5";
             setTimeout(() => {
-              console.log("4");
+              document.getElementById("demo").innerHTML = "4";
               setTimeout(() => {
-                console.log("3");
+                document.getElementById("demo").innerHTML = "3";
                 setTimeout(() => {
-                  console.log("2");
+                  document.getElementById("demo").innerHTML = "2";
                   setTimeout(() => {
-                    console.log("1");
+                    document.getElementById("demo").innerHTML = "1";
                     setTimeout(() => {
-                      console.log("Happy Independence Day");
+                      document.getElementById("demo").innerHTML =
+                        "Happy Independence Day";
                     }, 1000);
                   }, 1000);
                 }, 1000);
