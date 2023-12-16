@@ -1,0 +1,24 @@
+MongoDB Task Day 2 Answers:
+
+1. Find all the topics and tasks which are thought in the month of October
+    db.topics.aggregate([{$match: { date: { $regex: "2020-10" } }},
+    {$project: {type: "topic",topicname: "$topicname",mentor: "$mentor",date: "$date"}},
+    {$unionWith: {coll: "tasks",pipeline: [{$match: { date: { $regex: "2020-10" } }},
+    {$project: {type: "task",taskname: "$taskname",mentor: "$mentor",date: "$date"}}]}}]);
+
+2. Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+    db.companies.find({recruitmentDate: {$gte: "2020-10-15",$lte: "2020-10-31"}})
+
+3. Find all the company drives and students who are appeared for the placement.
+    db.companies.find({},{companyName:1,selected:1})
+
+4. Find the number of problems solved by the user in codekata
+    db.users.find({},{name:1,codekata:1,_id:0})
+
+5. Find all the mentors with who has the mentee's count more than 15
+    db.mentors.aggregate([ { $project: { courseOpted: 1, studentCount: { $size: "$students" } } }, { $sort: { studentCount: -1 } }, { $limit: 1 }] )
+    
+6. Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+    db.users.aggregate([{$match: {$and: [{"absentDays.date": {$gte: "15-10-2020",$lte: "31-10-2020"}},{ $expr: { $gt: [{ $size: "$absentDays" }, 0] } },{ $expr: { $gt: [{ $size: "$tasks" }, 0] } }]}},
+    {$project: {_id: 0,id: 1,name: 1,absentCount: {$size: {$filter: {input: "$absentDays",as: "day",cond: {$and: [{ $gte: ["$$day.date", "15-10-2020"] },{ $lte: ["$$day.date", "31-10-2020"] }]}}}},
+    notSubmittedCount: {$size: {$filter: {input: "$tasks",as: "task",cond: { $eq: ["$$task.status", "Not Submitted"]}}}}}}])
